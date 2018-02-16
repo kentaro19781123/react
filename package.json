@@ -1,0 +1,21 @@
+{
+	"name": "react",
+	"description": "React is a JavaScript library for building user interfaces.",
+	"version": "15.2.1",
+	"homepage": "https://facebook.github.io/react/",
+	"license": "BSD-3-Clause",
+	"main": "react.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/facebook/react.git"
+	},
+	"dependencies": {
+	"react": "^15.2.1",
+ 	"react-dom": "^15.2.1"
+	 },
+	"browserify": {
+		"transform": [
+			"loose-envify"
+		]
+	}
+ }

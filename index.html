@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>React Tutorial</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.2.1/react-dom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+<body>
+	<h1>ReactJS</h1>
+	<h2>コンポーネントを利用する</h2>
+	<pre>
+		reactは、コンポーネント志向のフレームワーク。
+		基本はコンポーネントを作成し、それを画面に表示する。
+		renderはコンポーネントを表示する要求があった時に生成するHTMLを指定する
+		renderでは、jsxを使っているため、タグをそのまま書くことができる
+
+		var MyComponent = React.createClass(.....);
+		ReactDOM.render(....);
+	</pre>
+	<div class="result">
+		<div id="msg">wait...</div>
+	</div>
+
+
+	<h2>propsによる値の受け渡し</h2>
+	<pre>
+		jsxではタグの中に直接jsの変数やプロパティを書き込むことができる
+		{}はjsの値
+		this.props.contentはコンポーネント自身のpropsプロパティ内にあるcontentという値
+	</pre>
+	<div class="result">
+		<div id="msg2">wait...</div>
+	</div>
+
+
+	<h2>styleの設定</h2>
+	<pre>
+		単純にテキストでstyleを用意しても設定できない
+		以下のような{{ .... }}に設定する
+		style={{color:this.props.styleColor,background:this.props.styleBg,padding:this.props.stylePd}}
+	</pre>
+	<div class="result">
+		<div id="msg3">wait...</div>
+	</div>
+
+
+	<h2>複数コンポーネントを組み合わせる</h2>
+	<pre>
+		this.propsの値をさらにコンポーネントの属性に設定することで親コンポーネントから子コンポーネントへ値を受け渡すことができる。
+		コンポーネントを組み合わせる場合は、値を受け渡す仕組みを考えておく必要がある
+	</pre>
+	<div class="result">
+		<div id="msg4">wait...</div>
+	</div>
+
+
+	<h2>イベントの利用</h2>
+	<pre>
+		onClick属性が用意されている。
+		componentのイベントが実行される。
+		reactのイベントは、基本的には、HTMLに用意されているものと同じものが揃っています。
+	</pre>
+	<div class="result">
+		<div id="msg5">wait...</div>
+	</div>
+
+
+	<h2>stateプロパティ</h2>
+	<pre>
+		stateは、reactに用意されている双方向の表示更新が可能な部品
+		コンポーネントに「state」というプロパティが用意されている
+		値を更新するには、setStateメソッドを使う
+	</pre>
+	<div class="result">
+		<div id="msg6">wait...</div>
+	</div>
+
+
+	<h2>チェックボックスとラジオボタン</h2>
+	<pre>
+		stateを用意し、onChangeでメソッド内のstateを変更する
+		clickでstateの値を読み取って表示している
+	</pre>
+	<div class="result">
+		<div id="msg7">wait...</div>
+	</div>
+
+
+	<h2>selectの利用</h2>
+	<pre>
+		var 変数 = 配列 .map( 関数 .bind(this));
+		mapは配列全要素に対して処理を行う。引数にはコールバック関数が用意される
+	</pre>
+	<div class="result">
+		<div id="msg8">wait...</div>
+		<div id="msg9">wait...</div>
+		<div id="msg10">wait...</div>
+	</div>
+
+
+	<h2>Virtual DOMにアクセスする</h2>
+	<pre>
+		var in_str = ReactDOM.findDOMNode(this.refs.input1).value;
+		findDOMNodeメソッドは、引数に指定したエレメントのVirtual DOMのオブジェクトを返します
+	</pre>
+	<div class="result">
+		<div id="msg11">wait...</div>
+	</div>
+
+
+
+	<script type="text/babel" src="main.js"></script>
+</body>
+</html>

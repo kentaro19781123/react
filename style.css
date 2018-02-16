@@ -1,0 +1,26 @@
+body {
+  color:#666;
+  padding:5px 20px;
+  line-height: 150%;
+}
+
+p {
+  font-size: 18px;
+}
+
+h1 {
+  margin-top: 100px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.result {
+  background:#e6e6e6;
+  border:1px solid #ccc;
+  padding:10px;
+  border-radius:5px;
+}
